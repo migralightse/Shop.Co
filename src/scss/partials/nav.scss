@@ -1,0 +1,28 @@
+
+.nav_list {
+	display: flex;
+	padding-top: 0;
+
+}
+
+.nav_link {
+	display: block;
+	padding: 1.5rem;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+
+	leading-trim: both;
+	text-edge: cap;
+	font-family: "Universal Sans Display Trial";
+
+	color: #FFF;
+	transition: color .2s linear;
+
+	&:hover {
+		text-decoration: none;
+		color: #eaeaea;
+	}
+
+
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'UniversalSans';
+  src: url('Universal-Sans.woff') format('woff'),
+  url('Universal-Sans.woff2') format('woff2'),
+  url('Universal-Sans.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+

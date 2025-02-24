@@ -1,0 +1,172 @@
+/* === АДАПТАЦІЯ ДЛЯ ТЕЛЕФОНІВ === */
+@media screen and (max-width: 1390px) {
+	.preview_all_down {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start; /* Вирівнює контент по лівому краю */
+		position: relative;
+
+		.button {
+			align-self: flex-start;
+			margin-top: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.footer .footer-container .footer-links {
+
+		gap: 30px;
+	}
+	.footer .footer-container .footer-logo-text {
+
+		font-size: 40px;
+
+	}
+
+}
+
+@media screen and (max-width: 1199px) {
+
+	.footer .footer-container {
+		justify-content: start;
+
+	}
+	.footer-subscribe {
+		display: none;
+
+
+	}
+	.footer .footer-container > div, .footer .footer-container .footer-logo-text {
+		margin-right: 60px;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+
+	///header
+	.nav_link {
+		display: none;
+	}
+	.burger-menu {
+		display: block;
+	}
+	.burger_menu_list {
+		display: block;
+	}
+	.preview_title_header {
+		display: block;
+	}
+
+
+	///page1
+	.page_one-image {
+		width: 100%;
+		height: 100vh; /* Робить блок повноекранним */
+		overflow: hidden;
+		position: relative;
+
+		.image_columns {
+			width: 100%;
+			height: 100%;
+
+			.image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover; /* Обрізає краї замість спотворення */
+				object-position: right center;
+			}
+		}
+
+		.preview_all {
+			.preview_title {
+				padding: 0 0 0 15px;
+				font-size: 36px;
+				line-height: 0px;
+
+			}
+
+			.preview_all_down {
+				padding: 20px 15px;
+
+				.preview_title_down {
+					font-size: 26px;
+				}
+			}
+		}
+	}
+	//page2
+	.about_preview {
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* Центрує зображення та текст */
+	}
+	.container_page_two {
+		margin: 20px 0 40px 20px;
+	}
+
+	.white_block_media {
+		display: none;
+	}
+
+	///page3
+	.page_3 {
+		.about_page3 {
+			flex-direction: column;
+			height: auto;
+
+			.about_title {
+				margin: 20px 0 20px 20px;
+			}
+
+			.about_text {
+				margin: 0 0 0 0;
+				.about_text_right {
+					margin: 0 20px 30px 20px;
+				}
+			}
+			.about_button{
+				margin: 0 0 50px 20px;
+				.button{
+
+				}
+			}
+		}
+	}
+
+	.page_4{
+		.page_4_image{
+			display: block;
+
+			.swiper {
+				width: 100%;
+				height: 400px; /* Висота слайдера */
+			}
+
+			.swiper-slide img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+
+	////footer
+	.footer .footer-container {
+		display: grid;
+
+	}
+
+	.footer .footer-container .footer-logo-text {
+		margin: 0 0 60px 0;
+	}
+
+	.footer .footer-container .footer-links {
+		display: grid;
+
+	}
+
+}
+

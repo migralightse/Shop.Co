@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'ItemsDemo';
+	src: url('Items-Demo.woff') format('woff'),
+	url('Items-Demo.woff2') format('woff2'),
+	url('Items-Demo.ttf') format('ttf');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}

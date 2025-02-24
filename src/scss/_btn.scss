@@ -1,0 +1,44 @@
+.shop-now-btn {
+	background-color: transparent; /* Прозорий фон */
+	color: #FFF; /* Білий колір тексту */
+	border: 1px solid white; /* Тонка біла рамка */
+	padding: 20px 19px; /* Відступи всередині кнопки */
+	font-size: 14px; /* Розмір тексту */
+	font-family: "Universal Sans Display Trial";
+	text-transform: uppercase; /* Текст великими літерами */
+	letter-spacing: 1px; /* Простір між літерами */
+	cursor: pointer; /* Курсор для кнопки */
+	transition: all 0.3s ease; /* Плавні переходи для стилів при наведенні */
+	background-color: rgba(255, 255, 255, 0.1); /* Напівпрозорий білий фон */
+	position: relative;
+	z-index: 7;
+}
+
+.shop-now-btn:hover {
+	background-color: rgba(255, 255, 255, 0.3); /* Змінюємо фон при наведенні */
+	color: white; /* Залишаємо білий текст */
+}
+
+.shop-now-btn_two{
+	background-color: transparent; /* Прозорий фон */
+	color: #000000; /* Білий колір тексту */
+	border: 1px solid #000000; /* Тонка біла рамка */
+	padding: 20px 19px; /* Відступи всередині кнопки */
+	font-size: 14px; /* Розмір тексту */
+	font-family: "Universal Sans Display Trial";
+	text-transform: uppercase; /* Текст великими літерами */
+	letter-spacing: 1px; /* Простір між літерами */
+	cursor: pointer; /* Курсор для кнопки */
+	transition: all 0.3s ease; /* Плавні переходи для стилів при наведенні */
+	background-color: rgba(255, 255, 255, 0.1); /* Напівпрозорий білий фон */
+
+
+	position: relative;
+
+
+}
+
+.shop-now-btn_two:hover {
+	background-color: rgba(255, 255, 255, 0.3); /* Змінюємо фон при наведенні */
+	color: #858585; /* Залишаємо білий текст */
+}

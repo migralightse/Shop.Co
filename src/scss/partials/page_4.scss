@@ -1,0 +1,30 @@
+.page_4{
+	.page_4_image{
+		max-width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.page_4_title{
+		position: relative;
+		width: 100%;
+		height: 250px;
+		background-color: #fff;
+
+		.bestsellers-text{
+			position: absolute;
+			margin: 0 ;
+			left: 30px;
+			bottom: 30px;
+
+			color: #000;
+			leading-trim: both;
+			text-edge: cap;
+			font-family: "Items Demo";
+			font-size: 28px;
+			font-style: normal;
+			font-weight: 200;
+			line-height: 100%; /* 36px */
+		}
+	}
+}

@@ -1,0 +1,122 @@
+.footer {
+	background: #FBFBFB;
+	padding: 30px 30px;
+
+	.footer-container {
+		display: flex;
+		justify-content: space-between;
+		max-width: 100%;
+		overflow: hidden;
+		height: auto;
+		margin: 0 auto;
+
+
+		.footer-logo-text {
+			color: #000000;
+			width: auto;
+			font-size: 60px;
+			font-weight: bold;
+			margin: 0 0 0 0;
+			.footer-text{
+
+			}
+
+		}
+
+		.footer-links {
+			display: flex;
+			justify-content: space-between;
+			gap: 100px;
+
+
+
+			.footer-column {
+				h3 {
+					font-size: 18px;
+					color: #333;
+					margin-bottom: 30px;
+				}
+
+				ul {
+
+					list-style: none;
+					padding: 0;
+					margin: 0;
+				}
+
+				li {
+					margin-bottom: 15px;
+				}
+
+				a {
+					text-decoration: none;
+					color: #000;
+					font-size: 14px;
+					transition: color 0.3s ease;
+
+					&:hover {
+						color: #262626;
+
+					}
+				}
+			}
+		}
+		.footer-subscribe {
+			max-width: 400px; /* Обмежуємо ширину */
+
+			h3 {
+				font-size: 18px;
+				color: #333;
+				margin-bottom: 10px;
+			}
+			p {
+				font-size: 15px;
+				color: #000000;
+				font-family: "Items Demo";
+				margin-bottom: 40px;
+				margin-top: 40px;
+			}
+
+			form {
+				display: flex;
+				gap: 10px;
+			}
+
+			input[type="email"] {
+				flex: 1; /* Розтягує input */
+				padding: 10px;
+				font-size: 14px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				outline: none;
+
+				&:focus {
+					border-color: #000;
+				}
+			}
+
+			button {
+					background-color: transparent; /* Прозорий фон */
+					color: #000000; /* Білий колір тексту */
+					border: 1px solid #000000; /* Тонка біла рамка */
+					padding: 20px 19px; /* Відступи всередині кнопки */
+					font-size: 14px; /* Розмір тексту */
+					font-family: "Universal Sans Display Trial";
+					text-transform: uppercase; /* Текст великими літерами */
+					letter-spacing: 1px; /* Простір між літерами */
+					cursor: pointer; /* Курсор для кнопки */
+					transition: all 0.3s ease; /* Плавні переходи для стилів при наведенні */
+					background-color: rgba(255, 255, 255, 0.1); /* Напівпрозорий білий фон */
+					position: relative;
+					z-index: 7;
+				}
+
+				:hover {
+					background-color: rgba(255, 255, 255, 0.3); /* Змінюємо фон при наведенні */
+					color: #505050; /* Залишаємо білий текст */
+				}
+			}
+		}
+	}
+
+
