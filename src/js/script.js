@@ -21,3 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Додаємо обробник кліку на бургер-іконку
 	burgerIcon.addEventListener("click", toggleMenu);
 });
+
+window.addEventListener("scroll", function () {
+	let header = document.querySelector(".container");
+	if (window.scrollY > 500) {
+		header.classList.add("scrolled"); // Додаємо клас при прокрутці
+	} else {
+		header.classList.remove("scrolled"); // Видаляємо клас, якщо наверху
+	}
+});
+

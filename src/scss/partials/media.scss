@@ -96,6 +96,11 @@
 			}
 		}
 	}
+	.white_block_page_1{
+		height: 70px;
+	}
+
+
 	//page2
 	.about_preview {
 		display: flex;
@@ -122,34 +127,74 @@
 
 			.about_text {
 				margin: 0 0 0 0;
+
 				.about_text_right {
 					margin: 0 20px 30px 20px;
 				}
 			}
-			.about_button{
+
+			.about_button {
 				margin: 0 0 50px 20px;
-				.button{
+
+				.button {
 
 				}
 			}
 		}
 	}
 
-	.page_4{
-		.page_4_image{
-			display: block;
+	.page_4 {
+		.page_4_image {
+			display: flex;
+			width: 100%;
 
-			.swiper {
-				width: 100%;
-				height: 400px; /* Висота слайдера */
-			}
+			height: 800px;
+			overflow: hidden;
+			position: relative;
+			white-space: nowrap;
 
-			.swiper-slide img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
+			.image_columns {
+				display: flex;
+				width: 100%; /* 3 фото = 300% ширини */
+				animation: slide 9s infinite; /* 9 секунд на повний цикл (3 сек на кожне фото) */
+
+				img {
+					width: 100vw;
+					height: 800px;
+					object-fit: cover;
+				}
 			}
 		}
+	}
+
+
+	@keyframes slide {
+		0% {
+			transform: translateX(0%);
+		}
+		33.33% {
+			transform: translateX(-100%);
+		}
+		66.66% {
+			transform: translateX(-200%);
+		}
+		100% {
+			transform: translateX(0%);
+		}
+		/* Повертаємось на початок */
+	}
+
+	////page 5
+	.page_5 {
+		.about_block {
+			grid-template-columns: repeat(2, 1fr);
+			.block {
+
+			}
+		}
+	}
+	.white_block_page_5{
+		height: 40px;
 	}
 
 
