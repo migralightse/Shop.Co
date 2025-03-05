@@ -17,12 +17,15 @@
 	font-family: "Universal Sans Display Trial";
 
 	color: #FFF;
-	transition: color .2s linear;
+	transition: opacity .2s linear;
 
 	&:hover {
 		text-decoration: none;
-		color: #eaeaea;
+		opacity: 0.4;
 	}
+}
 
-
+.nav_link.active {
+	color: black;
+	transition: 0.3s ease;
 }

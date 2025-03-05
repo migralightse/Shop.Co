@@ -3,9 +3,9 @@
 		<div class="header_inner">
 			<div class="header_left">
 				<div class="burger-menu" onclick="toggleMenu()">
-					<div id="bar1" class="bar" onclick="toggleMenu()"></div>
-					<div id="bar2" class="bar" onclick="toggleMenu()"></div>
-					<div id="bar3" class="bar" onclick="toggleMenu()"></div>
+					<div id="bar1" class="bar "></div>
+					<div id="bar2" class="bar "></div>
+					<div id="bar3" class="bar "></div>
 				</div>
 				<div class="burger_menu_list">
 					<ul class="burger_menu_link">
@@ -40,7 +40,7 @@
 							</ul>
 						</div>
 					</div>
-					</div>
+				</div>
 
 				<div class="preview_title_header" onclick="toggleMenu()">
 					ELY SHIVA
@@ -48,18 +48,74 @@
 				<nav class="nav">
 					<ul class="nav_list">
 						<li>
-							<a class="nav_link" href="">Shop</a>
+							<a id="shop-link" class="nav_link" onclick="toggleShopMenu()" href="#">Shop</a>
 						</li>
 						<li>
-							<a class="nav_link" href="#">Collections</a>
+							<a id="Collections-link" class="nav_link" onclick="toggleCollectionsMenu()" href="#">Collections</a>
 						</li>
 						<li>
-							<a class="nav_link" href="#">Explore</a>
+							<a class="nav_link" onclick="toggleShopMenu()" href="#">Explore</a>
 						</li>
 
 					</ul>
 				</nav>
+
+				<div class="nav_menu_list">
+					<div class="nav_sub_list">
+						<div class="nav-column">
+							<h3>Highlights </h3>
+							<ul>
+								<li><a href="#">New arrivals</a></li>
+								<li><a href="#">Best Sellers</a></li>
+								<li><a href="#">Gifts</a></li>
+								<li><a href="#">Sale</a></li>
+							</ul>
+						</div>
+						<div class="nav-column">
+							<h3>Ready-to-wear</h3>
+							<ul>
+								<li><a href="#">Outerwear</a></li>
+								<li><a href="#">Knits & Sweaters</a></li>
+								<li><a href="#">Blazers</a></li>
+								<li><a href="#">Shirts & Blouses</a></li>
+								<li><a href="#">Trousers & Shorts</a></li>
+								<li><a href="#">Tops</a></li>
+								<li><a href="#">Dresses & Skirts</a></li>
+								<li><a href="#">Denim</a></li>
+								<li><a href="#">Swim</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="nav_menu_Collections_list">
+					<div class="nav_sub_list">
+						<div class="nav-column">
+							<h3>Highlights </h3>
+							<ul>
+								<li><a href="#">New arrivals</a></li>
+								<li><a href="#">Best Sellers</a></li>
+								<li><a href="#">Gifts</a></li>
+								<li><a href="#">Sale</a></li>
+							</ul>
+						</div>
+						<div class="nav-column">
+							<h3>Collections</h3>
+							<ul>
+								<li><a href="#">City Summer Edit</a></li>
+								<li><a href="#">Spring Summer 25</a></li>
+								<li><a href="#">Timeless Luxury Drop</a></li>
+								<li><a href="#">Fall Winter 23</a></li>
+								<li><a href="#">Spring Summer 24</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
 			</div>
+
 			<div class="header_right">
 				<nav class="nav">
 					<ul class="nav_list">
