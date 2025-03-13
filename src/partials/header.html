@@ -2,19 +2,147 @@
 	<div class="container">
 		<div class="header_inner">
 			<div class="header_left">
-				<div class="burger-menu" onclick="toggleMenu()">
+				<div class="burger-menu"  >
 					<div id="bar1" class="bar "></div>
 					<div id="bar2" class="bar "></div>
 					<div id="bar3" class="bar "></div>
 				</div>
-				<div class="burger_menu_list">
+				<div class="burger_menu_list js-nav_link">
 					<ul class="burger_menu_link">
-						<li><a class="burger_menu_link_a" href="#">Shop</a></li>
-						<li><a class="burger_menu_link_a" href="#">Collections</a></li>
-						<li><a class="burger_menu_link_a" href="#">Explore</a></li>
-						<li><a class="burger_menu_link_a" href="#">Search</a></li>
+						<li><a class="burger_menu_link_a" href="#" data-popupmenu="shop">Shop</a></li>
+						<li><a class="burger_menu_link_a " href="#"data-popupmenu="collections" >Collections</a></li>
+						<li><a class="burger_menu_link_a" href="#" data-popupmenu="explore">Explore</a></li>
+						<li><a class="burger_menu_link_a" href="#" >Search</a></li>
 						<li><a class="burger_menu_link_a" href="#">Account</a></li>
 					</ul>
+
+					<div class="sub-list  js-sub-list" data-target="shop">
+						<div class="burger_sub_list_shop">
+							<div class="burger-column">
+								<h3>Highlights </h3>
+								<ul>
+									<li><a href="#">New arrivals</a></li>
+									<li><a href="#">Best Sellers</a></li>
+									<li><a href="#">Gifts</a></li>
+									<li><a href="#">Sale</a></li>
+								</ul>
+							</div>
+							<div class="burger-column">
+								<h3>Ready-to-wear</h3>
+								<ul>
+									<li><a href="#">Outerwear</a></li>
+									<li><a href="#">Knits & Sweaters</a></li>
+									<li><a href="#">Blazers</a></li>
+									<li><a href="#">Shirts & Blouses</a></li>
+									<li><a href="#">Trousers & Shorts</a></li>
+									<li><a href="#">Tops</a></li>
+									<li><a href="#">Dresses & Skirts</a></li>
+									<li><a href="#">Denim</a></li>
+									<li><a href="#">Swim</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="sub-list  js-sub-list" data-target="collections">
+						<div class="burger_sub_list_collections">
+							<div class="burger-column">
+								<h3>Highlights </h3>
+								<ul>
+									<li><a href="#">New arrivals</a></li>
+									<li><a href="#">Best Sellers</a></li>
+									<li><a href="#">Gifts</a></li>
+									<li><a href="#">Sale</a></li>
+								</ul>
+							</div>
+							<div class="burger-column">
+								<h3>Collections</h3>
+								<ul>
+									<li><a href="#">City Summer Edit</a></li>
+									<li><a href="#">Spring Summer 25</a></li>
+									<li><a href="#">Timeless Luxury Drop</a></li>
+									<li><a href="#">Fall Winter 23</a></li>
+									<li><a href="#">Spring Summer 24</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="sub-list  js-sub-list" data-target="explore">
+						<div class="burger_sub_list_explore">
+							<div class="burger-column">
+								<div class="burger_column_sub">
+									<div class="column_sub">
+										<h3>Highlights </h3>
+										<ul>
+											<li><a href="#">New arrivals</a></li>
+											<li><a href="#">Best Sellers</a></li>
+											<li><a href="#">Gifts</a></li>
+											<li><a href="#">Sale</a></li>
+										</ul>
+									</div>
+									<div class="column_sub">
+										<h3>Brand</h3>
+										<ul>
+											<li><a href="#">About</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Store Locator</a></li>
+											<li><a href="#">Stockists</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="burger_column_sub column_sub_down">
+									<div class="column_sub">
+										<h3>Social</h3>
+										<ul>
+											<li><a href="#">Instagram</a></li>
+											<li><a href="#">Tiktok</a></li>
+											<li><a href="#">Pinterest</a></li>
+										</ul>
+									</div>
+								</div>
+								</div>
+
+
+						</div>
+					</div>
+					<div class="sub-list  js-sub-list" data-target="search">
+						<div class="burger_sub_list_explore">
+							<div class="burger-column">
+								<div class="burger_column_sub">
+									<div class="column_sub">
+										<h3>Highlights </h3>
+										<ul>
+											<li><a href="#">New arrivals</a></li>
+											<li><a href="#">Best Sellers</a></li>
+											<li><a href="#">Gifts</a></li>
+											<li><a href="#">Sale</a></li>
+										</ul>
+									</div>
+									<div class="column_sub">
+										<h3>Brand</h3>
+										<ul>
+											<li><a href="#">About</a></li>
+											<li><a href="#">Contact</a></li>
+											<li><a href="#">Store Locator</a></li>
+											<li><a href="#">Stockists</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="burger_column_sub column_sub_down">
+									<div class="column_sub">
+										<h3>Social</h3>
+										<ul>
+											<li><a href="#">Instagram</a></li>
+											<li><a href="#">Tiktok</a></li>
+											<li><a href="#">Pinterest</a></li>
+										</ul>
+									</div>
+								</div>
+								</div>
+
+
+						</div>
+					</div>
+
 					<div class="burger_sub_list">
 						<div class="burger-column">
 							<h3>Highlights </h3>
@@ -46,86 +174,30 @@
 					ELY SHIVA
 				</div>
 				<nav class="nav">
-					<ul class="nav_list">
+					<ul class="nav_list js-nav_link">
 						<li>
-							<a id="shop-link" class="nav_link" onclick="toggleShopMenu()" href="#">Shop</a>
+							<a id="shop-link" class="nav_link" href="#" data-menu="shop">Shop</a>
 						</li>
 						<li>
-							<a id="Collections-link" class="nav_link" onclick="toggleCollectionsMenu()" href="#">Collections</a>
+							<a id="Collections-link" class="nav_link" href="#" data-menu="collections">Collections</a>
 						</li>
 						<li>
-							<a class="nav_link" onclick="toggleShopMenu()" href="#">Explore</a>
+							<a id="Explore-link" class="nav_link" href="#" data-menu="explore">Explore</a>
 						</li>
 
 					</ul>
 				</nav>
-
-				<div class="nav_menu_list">
-					<div class="nav_sub_list">
-						<div class="nav-column">
-							<h3>Highlights </h3>
-							<ul>
-								<li><a href="#">New arrivals</a></li>
-								<li><a href="#">Best Sellers</a></li>
-								<li><a href="#">Gifts</a></li>
-								<li><a href="#">Sale</a></li>
-							</ul>
-						</div>
-						<div class="nav-column">
-							<h3>Ready-to-wear</h3>
-							<ul>
-								<li><a href="#">Outerwear</a></li>
-								<li><a href="#">Knits & Sweaters</a></li>
-								<li><a href="#">Blazers</a></li>
-								<li><a href="#">Shirts & Blouses</a></li>
-								<li><a href="#">Trousers & Shorts</a></li>
-								<li><a href="#">Tops</a></li>
-								<li><a href="#">Dresses & Skirts</a></li>
-								<li><a href="#">Denim</a></li>
-								<li><a href="#">Swim</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="nav_menu_Collections_list">
-					<div class="nav_sub_list">
-						<div class="nav-column">
-							<h3>Highlights </h3>
-							<ul>
-								<li><a href="#">New arrivals</a></li>
-								<li><a href="#">Best Sellers</a></li>
-								<li><a href="#">Gifts</a></li>
-								<li><a href="#">Sale</a></li>
-							</ul>
-						</div>
-						<div class="nav-column">
-							<h3>Collections</h3>
-							<ul>
-								<li><a href="#">City Summer Edit</a></li>
-								<li><a href="#">Spring Summer 25</a></li>
-								<li><a href="#">Timeless Luxury Drop</a></li>
-								<li><a href="#">Fall Winter 23</a></li>
-								<li><a href="#">Spring Summer 24</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-
 			</div>
 
 			<div class="header_right">
 				<nav class="nav">
-					<ul class="nav_list">
+					<ul class="nav_list js-nav_link_right">
 						<li>
-							<a class="nav_link" href="#">Search</a>
+							<a class="nav_link" href="#" data-menu="search">Search</a>
 						</li>
 						<li>
-							<a class="nav_link" href="#">Account</a>
+							<a class="nav_link" href="#" data-menu="account">Account</a>
 						</li>
-
 						<ul class="social">
 							<li class="social_item">
 								<a class="social_link" href="#" target="_blank">
@@ -148,6 +220,51 @@
 						</ul>
 					</ul>
 				</nav>
+<!--				<div class="burger_menu_list js-nav_link_right">-->
+<!--					<ul class="burger_menu_link">-->
+<!--						<li><a class="burger_menu_link_a" href="#">Shop</a></li>-->
+<!--						<li><a class="burger_menu_link_a " href="#">Collections</a></li>-->
+<!--						<li><a class="burger_menu_link_a" href="#">Explore</a></li>-->
+<!--						<li><a class="burger_menu_link_a" href="#">Search</a></li>-->
+<!--						<li><a class="burger_menu_link_a" href="#">Account</a></li>-->
+<!--					</ul>-->
+<!--					<div class="burger_sub_list_explore">-->
+<!--						<div class="burger-column">-->
+<!--							<div class="burger_column_sub">-->
+<!--								<div class="column_sub">-->
+<!--									<h3>Highlights </h3>-->
+<!--									<ul>-->
+<!--										<li><a href="#">New arrivals</a></li>-->
+<!--										<li><a href="#">Best Sellers</a></li>-->
+<!--										<li><a href="#">Gifts</a></li>-->
+<!--										<li><a href="#">Sale</a></li>-->
+<!--									</ul>-->
+<!--								</div>-->
+<!--								<div class="column_sub">-->
+<!--									<h3>Brand</h3>-->
+<!--									<ul>-->
+<!--										<li><a href="#">About</a></li>-->
+<!--										<li><a href="#">Contact</a></li>-->
+<!--										<li><a href="#">Store Locator</a></li>-->
+<!--										<li><a href="#">Stockists</a></li>-->
+<!--									</ul>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							<div class="burger_column_sub column_sub_down">-->
+<!--								<div class="column_sub">-->
+<!--									<h3>Social</h3>-->
+<!--									<ul>-->
+<!--										<li><a href="#">Instagram</a></li>-->
+<!--										<li><a href="#">Tiktok</a></li>-->
+<!--										<li><a href="#">Pinterest</a></li>-->
+<!--									</ul>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+
+
+<!--					</div>-->
+<!--				</div>-->
 			</div>
 		</div>
 	</div>

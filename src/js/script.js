@@ -5,43 +5,84 @@ document.addEventListener("DOMContentLoaded", function () {
 	const previewTitle = document.querySelector(".preview_title_header");
 	const bars = document.querySelectorAll(".bar");
 	const socialIcons = document.querySelectorAll(".icon");
-	const shop = document.querySelector("#shop-link");
-	const Collections = document.querySelector("#Collections-link");
-	const shopMenu = document.querySelector(".nav_menu_list");
-	const CollectionsMenu = document.querySelector(".nav_menu_Collections_list");
+	const overlay = document.querySelector('.overlay');
+
+	const firstMenu = document.querySelector('.js-nav_link a.nav_link:first-child');
+	const all_menu = document.querySelectorAll('.js-nav_link a');
+	const all_menu_right = document.querySelectorAll('.js-nav_link_right a');
 
 	// Функція для бургер-меню
 	function toggleBurgerMenu() {
-		burgerMenu.classList.toggle("active");
-		burgerIcon.classList.toggle("active");
+		let target = this.dataset.menu;
+		let targetpopup = this.dataset.popupmenu;
+
+		if (typeof targetpopup !== 'undefined') {
+			target = targetpopup;
+		}
+
+
+		let active_tab_menu = document.querySelector('div[data-target="' + target + '"]');
+		let all_tabs = document.querySelectorAll('.js-sub-list');
+
+
+		all_tabs.forEach(tab => tab.classList.remove("open"));
+		active_tab_menu.classList.toggle("open");
+
+		if (typeof targetpopup == 'undefined') {
+
+			burgerIcon.classList.toggle("active");
+			burgerMenu.classList.toggle("active");
+			container.classList.toggle("active");
+			previewTitle.classList.toggle("active");
+			bars.forEach(bar => bar.classList.toggle("active"));
+			socialIcons.forEach(icon => icon.classList.toggle("active"));
+			overlay.classList.add('active');
+		}
+	}
+
+	//функція для burger_menu_right
+	function toggleBurgerMenuRight(){
+
+	}
+
+
+
+
+	// Закрити меню при кліку на фон
+	overlay.addEventListener('click', () => {
+		burgerMenu.classList.remove('active');
+		overlay.classList.remove('active');
 		container.classList.toggle("active");
 		previewTitle.classList.toggle("active");
 		bars.forEach(bar => bar.classList.toggle("active"));
 		socialIcons.forEach(icon => icon.classList.toggle("active"));
-	}
-
-	// Функція для меню "Shop"
-	function toggleShopMenu(event) {
-		event.preventDefault(); // Щоб не перезавантажувалась сторінка
-		shopMenu.classList.toggle("active");
-		shop.classList.toggle("active");
-		container.classList.toggle("active");
-		socialIcons.forEach(icon => icon.classList.toggle("active"));
-	}
-
-	function toggleCollectionsMenu(event) {
-		event.preventDefault(); // Щоб не перезавантажувалась сторінка
-		CollectionsMenu.classList.toggle("active");
-		Collections.classList.toggle("active");
-		container.classList.toggle("active");
-		socialIcons.forEach(icon => icon.classList.toggle("active"));
-	}
+	});
 
 	// Обробники подій
-	burgerIcon.addEventListener("click", toggleBurgerMenu);
-	shop.addEventListener("click", toggleShopMenu);
-	Collections.addEventListener("click", toggleCollectionsMenu);
+	burgerIcon.addEventListener("click", function () {
+		firstMenu.click()
+	});
+
+
+	for (const menu of all_menu) {
+		menu.addEventListener("click", toggleBurgerMenu, false);
+	}
+
+	for (const menu of all_menu_right) {
+		menu.addEventListener("click", toggleBurgerMenuRight, false);
+	}
+
 });
+
+
+
+
+
+
+
+
+
+
 
 
 
