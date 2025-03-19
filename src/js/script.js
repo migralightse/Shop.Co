@@ -42,7 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	//функція для burger_menu_right
 	function toggleBurgerMenuRight(){
+		let target = this.dataset.menu;
 
+		let active_tab_menu = document.querySelector('div[data-target="' + target + '"]');
+		let all_tabs = document.querySelectorAll('.js-sub-list');
 	}
 
 
