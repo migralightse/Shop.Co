@@ -204,94 +204,6 @@
 }
 
 
-.header_right {
-	display: flex;
-	width: 40%;
-	justify-content: flex-end;
-
-	.burger_menu_list {
-		position: fixed;
-		top: 47px;
-		left: +100%; /* Початково ховаємо за екраном */
-		width: 100%;
-		height: 100%;
-		background: #FFFFFF;
-		transition: 0.3s ease;
-
-		.burger_menu_link {
-			position: absolute;
-			display: flex;
-			margin: 30px 0 0 20px;
-			gap: 30px;
-
-			.burger_menu_link_a {
-				color: #000;
-				leading-trim: both;
-				text-edge: cap;
-				font-family: "Universal Sans Display Trial";
-				font-size: 14px;
-				font-style: normal;
-				font-weight: 300;
-				line-height: 100%;
-				text-decoration: none;
-				transition: opacity 0.2s linear;
-			}
-
-			.burger_menu_link_a:hover {
-				opacity: 0.4;
-
-			}
-		}
-
-		.burger_sub_list {
-			display: flex;
-			gap: 85px;
-			margin: 90px 87px 0 20px;
-
-			.burger-column {
-				h3 {
-					margin-bottom: 30px;
-					color: black;
-					leading-trim: both;
-					text-edge: cap;
-					font-family: "Universal Sans Display Trial";
-					font-size: 12px;
-					font-style: normal;
-					font-weight: 300;
-					line-height: 100%;
-				}
-
-				a {
-					text-decoration: none;
-					color: #000;
-					transition: opacity 0.2s linear;
-					leading-trim: both;
-					text-edge: cap;
-					font-family: "Universal Sans Display Trial";
-					font-size: 18px;
-					font-style: normal;
-					font-weight: 300;
-
-					&:hover {
-						opacity: 0.4;
-					}
-				}
-
-				ul li {
-					margin-bottom: 10px;
-
-				}
-			}
-
-		}
-	}
-
-	.burger_menu_list.active {
-		left: 1200px; /* Виїжджає на екран */
-	}
-}
-
-
 .social .icon path,
 .social .icon rect {
 	stroke: white; /* Початковий колір */
@@ -557,7 +469,254 @@
 	}
 }
 
+.header_right {
+	display: flex;
+	width: 40%;
+	justify-content: flex-end;
 
+	.burger_menu_list_right {
+		z-index: 1003;
+		position: fixed;
+		top: 0px;
+		right: -520px; /* Початково приховане за правим краєм */
+		width: 520px;
+		height: 100%;
+		background: #FFFFFF;
+		transition: 0.3s ease;
+
+		.burger_menu_link {
+			position: absolute;
+			display: flex;
+			margin: 30px 0 0 20px;
+			gap: 30px;
+
+			.burger_menu_link_a {
+				color: #000;
+				leading-trim: both;
+				text-edge: cap;
+				font-family: "Universal Sans Display Trial";
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 100%;
+				text-decoration: none;
+				transition: opacity 0.2s linear;
+			}
+
+			.burger_menu_link_a:hover {
+				opacity: 0.4;
+
+			}
+		}
+
+		.burger_sub_list {
+			display: flex;
+			gap: 85px;
+			margin: 90px 87px 0 20px;
+
+			.burger-column {
+				h3 {
+					margin-bottom: 30px;
+					color: black;
+					leading-trim: both;
+					text-edge: cap;
+					font-family: "Universal Sans Display Trial";
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 300;
+					line-height: 100%;
+				}
+
+				a {
+					text-decoration: none;
+					color: #000;
+					transition: opacity 0.2s linear;
+					leading-trim: both;
+					text-edge: cap;
+					font-family: "Universal Sans Display Trial";
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 300;
+
+					&:hover {
+						opacity: 0.4;
+					}
+				}
+
+				ul li {
+					margin-bottom: 10px;
+
+				}
+			}
+
+		}
+	}
+
+	.burger_menu_list_right.active {
+		right: 0; /* Виїжджає на екран */
+	}
+}
+
+
+.sub-list_right {
+	display: none;
+
+	&.open {
+		display: block;
+	}
+
+	.burger_sub_list-search_right {
+
+		margin: 30px 30px 0 30px;
+
+		.burger-column {
+			.burger_column_sub {
+				display: flex;
+				gap: 294px;
+				margin-bottom: 30px;
+
+				.title_search {
+					color: #000;
+					leading-trim: both;
+					text-edge: cap;
+					font-family: "Items Demo";
+					font-size: 22px;
+					font-style: normal;
+					font-weight: 300;
+					line-height: 100%; /* 22px */
+				}
+
+				.input-container {
+					width: 100%;
+
+					.styled-input {
+						font-family: "Universal Sans Display Trial";
+						width: 100%; /* Повна ширина контейнера */
+						padding: 10px 0; /* Відступи зверху і знизу */
+						border: none; /* Прибираємо рамку */
+						border-bottom: 1px solid #999; /* Сіра лінія знизу */
+						font-size: 16px; /* Розмір шрифту */
+						outline: none; /* Прибираємо обведення при фокусі */
+						background-color: transparent; /* Робимо фон прозорим */
+						box-sizing: border-box; /* Щоб padding не збільшував ширину */
+					}
+
+					.styled-input::placeholder {
+						color: #999; /* Сірий колір placeholder'а */
+						font-style: italic;
+					}
+
+					.styled-input:focus {
+						border-bottom: 1px solid #000; /*змінюємо колір лінії при фокусі*/
+					}
+				}
+
+
+				.column_sub {
+
+					a {
+						text-decoration: none;
+						color: #000;
+						transition: opacity 0.2s linear;
+						leading-trim: both;
+						text-edge: cap;
+						font-family: "Universal Sans Display Trial";
+						font-size: 18px;
+						font-style: normal;
+						font-weight: 300;
+
+						&:hover {
+							opacity: 0.4;
+						}
+					}
+
+					ul li {
+						margin-bottom: 20px;
+
+					}
+				}
+			}
+		}
+	}
+
+	.burger_sub_list-account_right {
+
+		margin: 30px 30px 0 30px;
+
+		.burger-column {
+
+			.title_account {
+				color: #000;
+				leading-trim: both;
+				text-edge: cap;
+				font-family: "Items Demo";
+				font-size: 22px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 100%; /* 22px */
+			}
+
+			.burger_column_sub {
+				display: flex;
+				gap: 294px;
+				margin-bottom: 30px;
+
+				a {
+					text-decoration: none;
+					color: #000;
+					transition: opacity 0.2s linear;
+					leading-trim: both;
+					text-edge: cap;
+					font-family: "Universal Sans Display Trial";
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 300;
+
+					&:hover {
+						opacity: 0.4;
+					}
+				}
+
+				ul li {
+					margin-bottom: 20px;
+
+				}
+
+			}
+			.burger_column_help{
+				display: flex;
+				flex-direction: column;
+				position: fixed;
+				bottom: 30px;
+				.title_account_Help{
+					margin-bottom: 20px;
+
+					color: #000;
+					leading-trim: both;
+					text-edge: cap;
+					font-family: "Universal Sans Display Trial";
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 300;
+					line-height: 140%; /* 19.6px */
+				}
+				.column_sub_Help{
+					p{
+						color: #000;
+						leading-trim: both;
+						text-edge: cap;
+						font-family: "Universal Sans Display Trial";
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 300;
+						line-height: 140%; /* 19.6px */
+					}
+				}
+			}
+		}
+	}
+
+}
 
 
 
