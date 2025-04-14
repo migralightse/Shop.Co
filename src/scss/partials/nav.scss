@@ -4,6 +4,11 @@
 	padding-top: 0;
 
 }
+.active .main_nav_list{
+	display: none;
+	transition: all;
+
+}
 
 .nav_link {
 	display: block;

@@ -6,39 +6,6 @@
 	overflow-x: hidden;
 }
 
-.overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	display: none;
-	z-index: 1001;
-	margin: 50px 0 0 742px;
-	cursor: pointer;
-}
-
-.overlay.active {
-	display: block; /* Показати фон */
-
-}
-
-.overlay_right {
-	position: fixed;
-	top: 0;
-	right: 520px;
-	width: 100%;
-	height: 100%;
-	display: none;
-	z-index: 1001;
-	margin: 50px 0 0 0;
-	cursor: pointer;
-}
-
-.overlay_right.active {
-	display: block; /* Показати фон */
-}
-
 .page_one {
 	background-color: #FFFFFF;
 }
@@ -132,8 +99,9 @@
 		background-color: #fff;
 
 		.about_preview {
-			display: flex;
-			justify-content: space-between;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2px;
 		}
 
 

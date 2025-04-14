@@ -2,7 +2,10 @@
 	.page_4_image{
 		max-width: 100%;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 2px;
+		align-items: stretch;
+		background-color: #FFFFFF;
 	}
 
 	.page_4_title{

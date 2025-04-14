@@ -19,25 +19,28 @@ document.addEventListener("DOMContentLoaded", function () {
 	function toggleBurgerMenu() {
 		let target = this.dataset.menu;
 		let targetpopup = this.dataset.popupmenu;
-
 		if (typeof targetpopup !== 'undefined') {
 			target = targetpopup;
 		}
 		let active_tab_menu = document.querySelector('div[data-target="' + target + '"]');
 		let all_tabs = document.querySelectorAll('.js-sub-list');
-
 		all_tabs.forEach(tab => tab.classList.remove("open"));
-		active_tab_menu.classList.toggle("open");
+
+		// Додайте цю перевірку
+		if (active_tab_menu) {
+			active_tab_menu.classList.toggle("open");
+		}
 
 		if (typeof targetpopup == 'undefined') {
-
 			burgerIcon.classList.toggle("active");
 			burgerMenu.classList.toggle("active");
 			container.classList.toggle("active");
 			previewTitle.classList.toggle("active");
 			bars.forEach(bar => bar.classList.toggle("active"));
 			socialIcons.forEach(icon => icon.classList.toggle("active"));
-			overlay.classList.add('active');
+			if (overlay) {
+				overlay.classList.add('active');
+			}
 		}
 	}
 
@@ -56,8 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (typeof targetpopup == 'undefined') {
 			burgerMenuRight.classList.toggle("active"); // Використовуємо burgerMenuRight
 			previewTitle.classList.toggle("active");
-			overlay_right.classList.add('active');
 
+			if (overlay_right) {
+				overlay_right.classList.add('active');
+			}
 		}
 	}
 
@@ -65,24 +70,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-	// Закрити меню при кліку на фон
-	overlay.addEventListener("click", () => {
-		burgerMenu.classList.remove("active");
-		overlay.classList.remove("active");
-		container.classList.remove("active");
-		previewTitle.classList.remove("active");
-		bars.forEach(bar => bar.classList.remove("active"));
-		socialIcons.forEach(icon => icon.classList.remove("active"));
-	});
+	// Закрити меню при кліку на фон (тільки якщо overlay існує)
+	if (overlay) {
+		overlay.addEventListener("click", () => {
+			burgerMenu.classList.remove("active");
+			overlay.classList.remove("active");
+			container.classList.remove("active");
+			previewTitle.classList.remove("active");
+			bars.forEach(bar => bar.classList.remove("active"));
+			socialIcons.forEach(icon => icon.classList.remove("active"));
+		});
+	}
 
-	// Закрити меню при кліку на фон
-	overlay_right.addEventListener("click", () => {
-		burgerMenuRight.classList.remove("active");
-		overlay_right.classList.remove("active");
-		container.classList.remove("active");
-		previewTitle.classList.remove("active");
-		socialIcons.forEach(icon => icon.classList.remove("active"));
-	});
+	// Закрити меню при кліку на фон (тільки якщо overlay_right існує)
+	if (overlay_right) {
+		overlay_right.addEventListener("click", () => {
+			burgerMenuRight.classList.remove("active");
+			overlay_right.classList.remove("active");
+			container.classList.remove("active");
+			previewTitle.classList.remove("active");
+			socialIcons.forEach(icon => icon.classList.remove("active"));
+		});
+	}
 
 
 	// Обробники подій
@@ -115,11 +124,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //scroll!!!!
 window.addEventListener("scroll", function () {
-	let header = document.querySelector(".container");
-	if (window.scrollY > 500) {
-		header.classList.add("scrolled"); // Додаємо клас при прокрутці
-	} else {
-		header.classList.remove("scrolled"); // Видаляємо клас, якщо наверху
+	// Перевіряємо, чи ми не на сторінці collections
+	if (!document.body.classList.contains("white_header")) {
+		let header = document.querySelector(".container");
+		if (window.scrollY > 500) {
+			header.classList.add("scrolled"); // Додаємо клас при прокрутці
+		} else {
+			header.classList.remove("scrolled"); // Видаляємо клас, якщо наверху
+		}
 	}
 });
+
 

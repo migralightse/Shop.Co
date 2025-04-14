@@ -15,6 +15,39 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		.overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: none;
+			z-index: 1001;
+			margin: 50px 0 0 742px;
+			cursor: pointer;
+		}
+
+		.overlay.active {
+			display: block; /* Показати фон */
+
+		}
+
+		.overlay_right {
+			position: fixed;
+			top: 0;
+			right: 520px;
+			width: 100%;
+			height: 100%;
+			display: none;
+			z-index: 1001;
+			margin: 50px 0 0 0;
+			cursor: pointer;
+		}
+
+		.overlay_right.active {
+			display: block; /* Показати фон */
+		}
 	}
 }
 
@@ -26,6 +59,33 @@
 	background-color: transparent; /* Прозорий */
 	transition: background-color 0.3s ease-in-out;
 }
+
+.white_header .container {
+	background-color: $white;
+
+	.preview_title_header {
+		color: black;
+	}
+
+	.bar {
+		background-color: black !important;
+	}
+
+	.social .icon path,
+	.social .icon rect {
+		stroke: black; /* Колір іконок */
+	}
+
+	.nav .nav_link {
+		color: black !important;
+
+	}
+}
+
+.white_header .header{
+	background: none;
+}
+
 
 .container.active {
 	background-color: #FFFFFF;
@@ -54,6 +114,9 @@
 
 	}
 }
+
+
+
 
 
 .header_left {
@@ -683,12 +746,14 @@
 				}
 
 			}
-			.burger_column_help{
+
+			.burger_column_help {
 				display: flex;
 				flex-direction: column;
 				position: fixed;
 				bottom: 30px;
-				.title_account_Help{
+
+				.title_account_Help {
 					margin-bottom: 20px;
 
 					color: #000;
@@ -700,8 +765,9 @@
 					font-weight: 300;
 					line-height: 140%; /* 19.6px */
 				}
-				.column_sub_Help{
-					p{
+
+				.column_sub_Help {
+					p {
 						color: #000;
 						leading-trim: both;
 						text-edge: cap;
