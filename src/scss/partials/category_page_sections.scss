@@ -1,0 +1,337 @@
+.category_page_sections {
+	background-color: #ffff;
+
+	.container {
+		padding: 70px 100px;
+
+		.filters {
+			width: 295px;
+			height: auto;
+			padding: 20px 24px;
+			border-radius: 20px;
+			border: 1px solid rgba(0, 0, 0, 0.10);
+
+			.title_filters {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.title_filters_text {
+					color: #000;
+					font-family: 'Satoshi', sans-serif;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+				}
+
+				.title_filters_button {
+					.icon-button {
+						background-color: transparent;
+						border: none;
+						border-radius: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+
+					}
+				}
+			}
+
+			hr {
+				border: none;
+				height: 1px;
+				background-color: #e0e0e0;
+				margin: 24px 0;
+			}
+
+			.items_filters {
+				display: grid;
+				gap: 20px;
+
+				.items_filters_name {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					.items_name {
+						color: rgba(0, 0, 0, 0.60);
+						leading-trim: both;
+						text-edge: cap;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+					}
+
+					.items_button {
+						background-color: transparent;
+						border: none;
+						border-radius: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+					}
+				}
+			}
+
+			.price_filters {
+				.price_filters_title {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 20px;
+
+					.title_text {
+						color: #000;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+
+					.items_button {
+						background-color: transparent;
+						border: none;
+						border-radius: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+					}
+				}
+
+				.slider-track {
+					align-items: center;
+
+					.price_tax {
+						display: flex;
+						justify-content: space-around;
+						gap: 50px;
+
+						.price {
+							color: #000;
+							text-align: center;
+							font-family: 'Satoshi', sans-serif;
+							font-size: 14px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: normal;
+						}
+					}
+				}
+
+			}
+
+			.color_filters {
+				.color_filters_title {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 20px;
+
+					.title_text {
+						color: #000;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+
+					.items_button {
+						background-color: transparent;
+						border: none;
+						border-radius: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+					}
+				}
+
+				.ellipse_color {
+					display: grid; /* Робить контейнер grid-контейнером */
+					grid-template-columns: repeat(5, 1fr); /* Створює 5 стовпців однакової ширини */
+					grid-template-rows: repeat(2, auto);
+					gap: 15px;
+					row-gap: 16px; /* Відступ між рядками */
+				}
+			}
+
+			.size_filters {
+				.size_filters_title {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 20px;
+
+					.title_text {
+						color: #000;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+
+					.items_button {
+						background-color: transparent;
+						border: none;
+						border-radius: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+					}
+				}
+
+				.size-selector {
+					display: grid;
+					grid-auto-flow: column; // Переходить вниз по рядках, потім у наступну колонку
+					grid-template-rows: repeat(5, auto); // 5 рядків
+					gap: 8px;
+
+					.sub_size_selector {
+						display: flex;
+						gap: 8px;
+					}
+
+					button {
+						padding: 10px 20px;
+						border: none;
+						border-radius: 62px; // Повністю заокруглені
+						background-color: #f1f1f1;
+						color: rgba(0, 0, 0, 0.60);
+						font-family: 'Satoshi', sans-serif;
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+						cursor: pointer;
+						transition: background-color 0.2s ease, color 0.2s ease;
+
+						&.active {
+							background-color: black;
+							color: white;
+						}
+
+						&:hover:not(.active) {
+							background-color: #e0e0e0;
+						}
+					}
+				}
+
+				.button_end {
+					padding: 10px 20px;
+					border: none;
+					border-radius: 62px; // Повністю заокруглені
+					background-color: #f1f1f1;
+					color: rgba(0, 0, 0, 0.60);
+					font-family: 'Satoshi', sans-serif;
+					font-size: 14px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					cursor: pointer;
+					transition: background-color 0.2s ease, color 0.2s ease;
+
+					&.active {
+						background-color: black;
+						color: white;
+					}
+
+					&:hover:not(.active) {
+						background-color: #e0e0e0;
+					}
+				}
+
+
+			}
+
+			.dress_style {
+				.dress_filters_title {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 20px;
+
+					.title_text {
+						color: #000;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+
+					.items_button {
+						background-color: transparent;
+						border: none;
+						border-radius: 50%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+					}
+				}
+
+				.dress_items_filters {
+					display: grid;
+					gap: 20px;
+
+					.items_filters_name {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+
+						.items_name {
+							color: rgba(0, 0, 0, 0.60);
+							leading-trim: both;
+							text-edge: cap;
+							font-family: 'Satoshi', sans-serif;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: normal;
+						}
+
+						.items_button {
+							background-color: transparent;
+							border: none;
+							border-radius: 50%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							cursor: pointer;
+						}
+					}
+				}
+
+				.button_apply_filter {
+					text-align: center;
+					margin: 24px 0 0 0;
+
+					.apply_filter {
+						background-color: #000000;
+						color: #ffffff;
+						padding: 16px 54px;
+						border-radius: 62px;
+						border: 1px solid rgba(0, 0, 0, .1);
+						cursor: pointer;
+						transition: background-color .3s;
+						font-family: "Satoshi", sans-serif;
+						font-size: 14px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+					}
+				}
+			}
+		}
+	}
+}
