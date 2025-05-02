@@ -23,6 +23,22 @@
 url('../fonts/Universal-Sans.ttf')  format('truetype')
 }
 
+@font-face {
+	font-family: 'Integral CF';
+	src: url('../fonts/Fontspring-DEMO-integralcf-regularoblique.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url('../fonts/Satoshi-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -114,12 +130,9 @@ a{
 
 @import "partials/main";
 @import "partials/header";
-@import "partials/nav";
-@import "partials/social";
-@import "partials/page_3";
-@import "partials/page_4";
-@import "partials/page_5";
 @import "partials/footer";
 @import "partials/media";
-@import "partials/sections_four";
+@import "partials/newsletter";
+@import "partials/product_sections_page";
+
 

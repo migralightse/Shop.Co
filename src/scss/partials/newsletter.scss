@@ -1,0 +1,91 @@
+.newsletter-wrapper {
+	position: relative;
+	z-index: 10; // поверх main і footer
+	margin-top: -80px; // піднімається вгору
+	margin-bottom: -80px; // зменшити відстань до футера
+	pointer-events: none; // не заважає взаємодії
+}
+
+.newsletter {
+	display: flex;
+	justify-content: center;
+	background: transparent;
+	pointer-events: auto; // дозволити взаємодію з формою
+}
+
+.newsletter__container {
+	background-color: #000;
+	color: #fff;
+	padding: 28px 64px;
+	border-radius: 2rem;
+	max-width: 1240px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1.5rem;
+
+	.newsletter__title {
+		color: #FFF;
+		font-family: 'Integral CF', sans-serif;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 1000;
+		line-height: 45px; /* 112.5% */
+	}
+}
+
+
+
+.newsletter__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 14px;
+	background-color: black;
+}
+
+.newsletter__input-wrapper {
+	position: relative;
+	width: 320px;
+}
+
+.newsletter__icon {
+	position: absolute;
+	left: 12px;
+	top: 56%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+.newsletter__input {
+	width: 100%;
+	padding: 12px 12px 12px 44px;
+	border-radius: 999px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+}
+
+.newsletter__button {
+	width: 320px;
+	padding: 12px;
+	background-color: white;
+	border: none;
+	border-radius: 999px;
+	cursor: pointer;
+	transition: background 0.2s;
+	color: #000;
+	font-family: 'Satoshi' , sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.newsletter__button:hover {
+	background-color: #f0f0f0;
+}
+
+

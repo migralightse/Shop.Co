@@ -1,66 +1,95 @@
 .footer {
-	background: #FBFBFB;
-	padding: 30px 30px;
+	background: #F0F0F0;
+
+	hr {
+		border: none; /* Прибирає стандартну рамку браузера */
+		height: 1px; /* Задає товщину лінії */
+		background-color: #e0e0e0; /* Задає колір лінії (світло-сірий, як на скріншоті) */
+		margin: 0 100px; /* Задає вертикальні відступи зверху та знизу лінії */
+	}
 
 	.footer-container {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 		max-width: 100%;
 		overflow: hidden;
 		height: auto;
-		margin: 0 auto;
+		padding: 140px 100px 50px 100px;
 
 
-		.footer-logo-text {
-			color: #000000;
-			width: auto;
-			font-size: 60px;
-			font-weight: bold;
-			margin: 0 0 0 0;
-			.footer-text{
+		.footer-text {
+			display: grid;
+			gap: 25px;
 
+			h2 {
+				color: #000;
+				leading-trim: both;
+				text-edge: cap;
+				font-family: 'Integral CF', sans-serif;
+				font-size: 33.455px;
+				font-style: normal;
+				font-weight: 1000;
+				line-height: normal;
 			}
 
+			p {
+				color: rgba(0, 0, 0, 0.60);
+				font-family: 'Satoshi' , sans-serif;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 22px; /* 157.143% */
+			}
+
+			.footer_svg {
+				margin-top: 10px;
+			}
 		}
 
-		.footer-links {
-			display: flex;
-			justify-content: space-between;
-			gap: 100px;
 
+		.footer-column {
+			h3 {
+				color: #000;
+				font-family: 'Satoshi' , sans-serif;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 18px; /* 112.5% */
+				letter-spacing: 3px;
+				text-transform: uppercase;
+				margin-bottom: 26px;
+			}
 
+			ul {
 
-			.footer-column {
-				h3 {
-					font-size: 18px;
-					color: #333;
-					margin-bottom: 30px;
-				}
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
 
-				ul {
+			li {
+				margin-bottom: 20px;
+			}
 
-					list-style: none;
-					padding: 0;
-					margin: 0;
-				}
+			a {
+				color: rgba(0, 0, 0, 0.60);
+				font-family: 'Satoshi' , sans-serif;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 19px; /* 118.75% */
+				transition: color 0.3s ease;
+				text-decoration: none;
 
-				li {
-					margin-bottom: 15px;
-				}
+				&:hover {
+					color: #262626;
 
-				a {
-					text-decoration: none;
-					color: #000;
-					font-size: 14px;
-					transition: color 0.3s ease;
-
-					&:hover {
-						color: #262626;
-
-					}
 				}
 			}
 		}
+
+
 		.footer-subscribe {
 			max-width: 400px; /* Обмежуємо ширину */
 
@@ -69,10 +98,11 @@
 				color: #333;
 				margin-bottom: 10px;
 			}
+
 			p {
 				font-size: 15px;
 				color: #000000;
-				font-family: "Items Demo";
+				font-family: 'Satoshi' , sans-serif;
 				margin-bottom: 40px;
 				margin-top: 40px;
 			}
@@ -96,27 +126,46 @@
 			}
 
 			button {
-					background-color: transparent; /* Прозорий фон */
-					color: #000000; /* Білий колір тексту */
-					border: 1px solid #000000; /* Тонка біла рамка */
-					padding: 20px 19px; /* Відступи всередині кнопки */
-					font-size: 14px; /* Розмір тексту */
-					font-family: "Universal Sans Display Trial";
-					text-transform: uppercase; /* Текст великими літерами */
-					letter-spacing: 1px; /* Простір між літерами */
-					cursor: pointer; /* Курсор для кнопки */
-					transition: all 0.3s ease; /* Плавні переходи для стилів при наведенні */
-					background-color: rgba(255, 255, 255, 0.1); /* Напівпрозорий білий фон */
-					position: relative;
-					z-index: 7;
-				}
+				background-color: transparent; /* Прозорий фон */
+				color: #000000; /* Білий колір тексту */
+				border: 1px solid #000000; /* Тонка біла рамка */
+				padding: 20px 19px; /* Відступи всередині кнопки */
+				font-size: 14px; /* Розмір тексту */
+				font-family: 'Integral CF', sans-serif;
+				text-transform: uppercase; /* Текст великими літерами */
+				letter-spacing: 1px; /* Простір між літерами */
+				cursor: pointer; /* Курсор для кнопки */
+				transition: all 0.3s ease; /* Плавні переходи для стилів при наведенні */
+				background-color: rgba(255, 255, 255, 0.1); /* Напівпрозорий білий фон */
+				position: relative;
+				z-index: 7;
+			}
 
-				:hover {
-					background-color: rgba(255, 255, 255, 0.3); /* Змінюємо фон при наведенні */
-					color: #505050; /* Залишаємо білий текст */
-				}
+			:hover {
+				background-color: rgba(255, 255, 255, 0.3); /* Змінюємо фон при наведенні */
+				color: #505050; /* Залишаємо білий текст */
 			}
 		}
 	}
+
+	.footer_tm{
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 100px 81px 100px;
+		.footer_tm_text{
+			color: rgba(0, 0, 0, 0.60);
+			text-align: right;
+			font-family: 'Satoshi' , sans-serif;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+		.footer_pay{
+			display: flex;
+			gap: 12px;
+		}
+	}
+}
 
 

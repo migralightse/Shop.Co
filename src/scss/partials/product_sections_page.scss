@@ -1,0 +1,605 @@
+.product_sections_page {
+	background-color: #FFFFFF;
+
+	.container {
+		padding: 82px 100px 205px 100px;
+
+		.items_details {
+			display: flex;
+			gap: 40px;
+
+
+			.image_details {
+				display: flex;
+				gap: 14px;
+
+				.image_details_left {
+					display: grid;
+					gap: 14px;
+
+					.small_image_details {
+						height: 100%;
+						width: auto;
+
+						a {
+							cursor: pointer;
+						}
+
+						img {
+							height: 100%;
+							width: auto;
+						}
+					}
+				}
+
+				.image_details_right {
+
+					.standart_image_details {
+						height: 100%;
+						width: auto;
+
+						a {
+							cursor: pointer;
+						}
+
+						img {
+							height: 100%;
+							width: auto;
+						}
+					}
+				}
+			}
+
+			.product_details {
+				.items_info {
+
+					.items_title {
+						color: #000;
+						font-family: 'Integral CF', sans-serif;
+						font-size: 40px;
+						font-style: normal;
+						font-weight: 1000;
+						line-height: normal;
+					}
+
+					.rating {
+						display: flex;
+						align-items: center;
+						gap: 5.31px;
+						margin-bottom: 14px;
+
+						.rating-text {
+							color: #000;
+							font-family: 'Satoshi', sans-serif;
+							font-size: 36px;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: normal;
+						}
+					}
+
+					.info_tax {
+						color: #000;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 36px;
+						font-size: 32px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+						margin-bottom: 20px;
+					}
+
+					.items_sub_title {
+						color: rgba(0, 0, 0, 0.60);
+						leading-trim: both;
+						text-edge: cap;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 36px;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 22px; /* 137.5% */
+						margin-bottom: 24px;
+					}
+				}
+
+				hr {
+					border: none;
+					height: 1px;
+					background-color: #e0e0e0;
+					margin: 24px 0;
+				}
+
+				.select_color {
+					.color_title {
+						color: rgba(0, 0, 0, 0.60);
+						leading-trim: both;
+						text-edge: cap;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 36px;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+						margin-bottom: 16px;
+					}
+
+					.color_ellipse_block {
+						display: flex;
+						gap: 16px;
+					}
+				}
+
+				.choose_size {
+					.size_title {
+						color: rgba(0, 0, 0, 0.60);
+						leading-trim: both;
+						text-edge: cap;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 36px;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+						margin-bottom: 16px;
+					}
+
+					.size-selector {
+						display: flex;
+						gap: 12px;
+					}
+
+					.size-button {
+						padding: 12px 24px;
+						border: none;
+						border-radius: 62px; // повністю округлі краї
+						background-color: #f1f1f1; // світло-сірий фон
+						color: #333;
+						color: rgba(0, 0, 0, 0.60);
+						font-family: 'Satoshi', sans-serif;
+						font-size: 36px;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+						cursor: pointer;
+						transition: background-color 0.2s, color 0.2s;
+
+						&.active {
+							background-color: #000; // чорний фон
+							color: #fff; // білий текст
+						}
+
+						&:hover:not(.active) {
+							background-color: #e0e0e0;
+						}
+					}
+
+				}
+
+				.product-controls {
+					display: flex;
+					gap: 16px;
+					align-items: center;
+					font-family: 'Satoshi', sans-serif;
+				}
+
+				.quantity-control {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 16px 20px;
+					background-color: #f1f1f1;
+					border-radius: 62px;
+					gap: 16px;
+					width: 170px;
+					height: 52px;
+				}
+
+				.qty-btn {
+					background: none;
+					border: none;
+					font-size: 20px;
+					cursor: pointer;
+					color: #000;
+					padding: 0 4px;
+
+				}
+
+				.qty-value {
+					color: #000;
+					font-family: 'Satoshi', sans-serif;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+				}
+
+				.add-to-cart {
+					flex-grow: 1;
+					padding: 16px 54px;
+					background-color: #000;
+					color: #fff;
+					border: none;
+					border-radius: 62px;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					font-family: 'Satoshi', sans-serif;
+					cursor: pointer;
+					transition: background-color 0.2s;
+
+					&:hover {
+						background-color: #222;
+					}
+				}
+
+			}
+		}
+
+		.rating_reviews {
+			margin-top: 80px;
+
+			.product_info_menu {
+				display: flex;
+				justify-content: space-around;
+				border-bottom: 1px solid #ccc;
+				margin-bottom: 24px;
+
+				.title_menu {
+					background: none; /* Прибирає стандартний фон кнопки */
+					border: none;
+					padding: 0 0 24px 0;
+					color: rgba(0, 0, 0, 0.60);
+					leading-trim: both;
+					text-edge: cap;
+					font-family: 'Satoshi', sans-serif;
+					font-size: 36px;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 22px; /* 110% */
+
+					position: relative; /* Необхідно для позиціонування псевдоелемента */
+					padding-bottom: 5px;
+				}
+
+				.title_menu.active {
+					color: #000;
+					text-align: center;
+					leading-trim: both;
+					text-edge: cap;
+					font-family: 'Satoshi', sans-serif;
+					font-size: 36px;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 22px; /* 110% */
+				}
+
+				.title_menu.active::after {
+					content: "";
+					position: absolute;
+					left: 50%; /* Початкове центрування */
+					bottom: 0;
+					width: calc(100% + 330px); /* Ширина підкреслення (ширина тексту + 20px) */
+					height: 2px;
+					background-color: #000;
+					transform: translateX(-50%); /* Точне центрування підкреслення */
+				}
+			}
+
+			.all_reviews {
+				.reviews-header {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 32px;
+
+					.reviews_title {
+						display: flex;
+						gap: 8px;
+						align-items: center;
+
+						.title_text {
+							color: #000;
+							font-family: 'Satoshi', sans-serif;
+							font-size: 36px;
+							font-size: 24px;
+							font-style: normal;
+							font-weight: 700;
+							line-height: normal;
+						}
+
+						.sub_title_text {
+							color: rgba(0, 0, 0, 0.60);
+							leading-trim: both;
+							text-edge: cap;
+							font-family: 'Satoshi', sans-serif;
+							font-size: 36px;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 22px; /* 137.5% */
+						}
+
+					}
+
+					.review-controls {
+						display: flex;
+						gap: 12px;
+						font-family: 'Satoshi', sans-serif;
+						align-items: center;
+					}
+
+					.icon-button {
+						background-color: #f1f1f1;
+						border: none;
+						border-radius: 50%;
+						width: 48px;
+						height: 48px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+
+						img {
+							width: 20px;
+							height: 20px;
+						}
+					}
+
+					.dropdown-button {
+						display: flex;
+						align-items: center;
+						gap: 8px;
+						width: 120px;
+						height: 48px;
+						padding: 16px 20px;
+						background-color: #f1f1f1;
+						border: none;
+						border-radius: 999px;
+						color: #000;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+						cursor: pointer;
+
+						img {
+							width: 12px;
+							height: 12px;
+						}
+					}
+
+					.write-review-button {
+						width: 166px;
+						height: 48px;
+						//padding: 16px 20px;
+						background-color: #000;
+						color: #fff;
+						border: none;
+						border-radius: 999px;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+						cursor: pointer;
+						transition: background-color 0.2s;
+
+						&:hover {
+							background-color: #222;
+						}
+					}
+
+				}
+
+				.scroll {
+					display: grid; /* Перетворює контейнер на grid-контейнер */
+					grid-template-columns: repeat(3, 1fr); /* Визначає 3 стовпці однакової ширини */
+					grid-template-rows: repeat(2, auto); /* Визначає 2 рядки з автоматичною висотою */
+					gap: 20px;
+
+
+
+					.feedback_block {
+						max-width: 610px;
+						padding: 28px 32px;
+						border-radius: 20px;
+						border: 1px solid rgba(0, 0, 0, 0.10);
+						display: flex;
+						flex-direction: column;
+
+						.feedback_rating_button {
+							display: flex;
+							justify-content: space-between;
+							margin-bottom: 15px;
+
+							.feedback_rating {
+								display: flex;
+								align-items: center;
+								gap: 5.31px;
+
+								.star {
+									width: 20px;
+									height: 20px;
+									color: #facc15; // Яскраво-жовтий (як на скріншоті)
+								}
+							}
+
+							.svg-button {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								width: 40px; /* Задайте потрібну ширину кнопки */
+								height: 40px; /* Задайте потрібну висоту кнопки */
+								border: none; /* Прибирає стандартну рамку кнопки */
+								background-color: transparent; /* Робить фон прозорим */
+
+								cursor: pointer;
+								outline: none;
+							}
+
+
+							.svg-button svg {
+								width: 100%; /* Задайте розмір SVG відносно кнопки */
+								height: auto;
+							}
+						}
+
+
+						.feedback_name {
+							color: #000;
+							leading-trim: both;
+							text-edge: cap;
+							font-family: 'Satoshi', sans-serif;
+							font-size: 20px;
+							font-style: normal;
+							font-weight: 700;
+							line-height: 22px; /* 110% */
+							margin-bottom: 12px;
+						}
+
+						.feedback_text {
+							color: rgba(0, 0, 0, 0.60);
+							font-family: 'Satoshi', sans-serif;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 22px; /* 137.5% */
+							margin-bottom: 24px;
+						}
+
+						.posted_block {
+							color: rgba(0, 0, 0, 0.60);
+							font-family: 'Satoshi', sans-serif;
+							font-size: 16px;
+							font-size: 16px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: 22px; /* 137.5% */
+						}
+					}
+				}
+				.button_reviews {
+					text-align: center;
+					padding: 36.42px 0 0 0;
+
+					.more_reviews {
+						background-color: #ffffff;
+						color: #000000;
+						padding: 16px 54px;
+						border-radius: 62px;
+						border: 1px solid rgba(0, 0, 0, 0.10);
+
+
+						cursor: pointer;
+						transition: background-color 0.3s;
+						font-family: 'Satoshi' , sans-serif;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+
+						&:hover {
+							background-color: #fafafa;
+						}
+					}
+				}
+
+				.new_arrivals {
+					margin-top: 64px;
+					.arrivals_title {
+						color: #000;
+						text-align: center;
+						font-family: 'Integral CF', sans-serif;
+						font-size: 64px;
+						font-style: normal;
+						font-weight: 1000;
+						line-height: 64px;
+						margin-bottom: 55px;
+					}
+
+					.arrivals_items_all {
+						display: flex;
+						gap: 20px;
+
+						.arrivals_items {
+							width: 25%;
+
+							a {
+								display: block; // Якщо треба
+
+
+								.image {
+									width: 100%;
+									height: 100%;
+									object-fit: cover; // або contain в залежності від бажаного ефекту
+									display: block;
+									border-radius: 2rem;
+								}
+							}
+
+							.items_info {
+								padding-top: 16px;
+								display: grid;
+								gap: 8.26px;
+
+								.info_text {
+									color: #000;
+									font-family: 'Satoshi' , sans-serif;
+									font-size: 20px;
+									font-style: normal;
+									font-weight: 700;
+									line-height: normal;
+								}
+
+								.rating {
+									display: flex;
+									align-items: center;
+									gap: 5.31px;
+
+									.star {
+										width: 20px;
+										height: 20px;
+										color: #facc15; // Яскраво-жовтий (як на скріншоті)
+
+										&.half {
+											// Можна додати інші стилі, якщо потрібно відрізняти
+										}
+									}
+
+									.rating-text {
+										color: #000;
+										font-family: 'Satoshi' , sans-serif;
+										font-size: 14px;
+										font-style: normal;
+										font-weight: 400;
+										line-height: normal;
+									}
+								}
+
+								.info_tax {
+									color: #000;
+									font-family: 'Satoshi' , sans-serif;
+									font-size: 24px;
+									font-style: normal;
+									font-weight: 700;
+									line-height: normal;
+								}
+
+							}
+						}
+					}
+
+				}
+
+			}
+		}
+
+	}
+}
+
