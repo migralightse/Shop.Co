@@ -1,0 +1,357 @@
+.cart_sections {
+	background-color: #FFFFFF;
+
+	.container {
+		padding: 134px 100px 170px 100px;
+
+		.title_cart {
+			color: #000;
+			font-family: 'Integral CF', sans-serif;
+			font-size: 40px;
+			font-style: normal;
+			font-weight: 1000;
+			line-height: normal;
+		}
+
+		.order_cart_summary {
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+		}
+
+		.order_cart {
+			display: flex;
+			width: 715px;
+			height: auto;
+			padding: 20px 24px;
+			flex-direction: column;
+			border-radius: 20px;
+			border: 1px solid rgba(0, 0, 0, 0.10);
+
+			hr {
+				border: none;
+				height: 1px;
+				background-color: #e0e0e0;
+				margin: 24px 0;
+			}
+
+			.cart-item {
+				display: flex;
+				gap: 16px;
+
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 8px;
+					background: #f4f4f4;
+				}
+
+				.details {
+					display: grid;
+					width: 100%;
+
+					.details_title {
+						display: flex;
+						justify-content: space-between;
+
+						.text {
+							color: #000;
+							font-family: 'Satoshi', sans-serif;
+							font-size: 20px;
+							font-style: normal;
+							font-weight: 700;
+							line-height: normal;
+							margin-bottom: 2px;
+						}
+
+						svg {
+							cursor: pointer;
+						}
+
+					}
+
+					.info_details {
+						.info_size {
+							display: flex;
+							gap: 5px;
+							margin-bottom: 4px;
+
+							.size_text {
+								color: #000;
+								font-family: 'Satoshi', sans-serif;
+								font-size: 14px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: normal;
+							}
+
+							.info_text {
+								color: rgba(0, 0, 0, 0.60);
+								font-family: 'Satoshi', sans-serif;
+								font-size: 14px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: normal;
+							}
+						}
+
+						.info_color {
+							display: flex;
+							gap: 5px;
+
+							.color_text {
+								color: #000;
+								font-family: 'Satoshi', sans-serif;
+								font-size: 14px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: normal;
+							}
+
+							.info_color {
+								color: rgba(0, 0, 0, 0.60);
+								font-family: 'Satoshi', sans-serif;
+								font-size: 14px;
+								font-style: normal;
+								font-weight: 400;
+								line-height: normal;
+							}
+						}
+					}
+
+					.tax_actions {
+						display: flex;
+						justify-content: space-between;
+
+						.quantity {
+							display: flex;
+							padding: 12px 20px;
+							align-items: center;
+							gap: 20px;
+							justify-content: space-between;
+							background-color: #f2f2f2;
+							border-radius: 62px; /* повністю круглі краї */
+							width: fit-content;
+
+						}
+
+						.quantity button {
+							background: none;
+							border: none;
+							font-size: 24px;
+							font-weight: bold;
+							cursor: pointer;
+							line-height: 1;
+							width: 24px;
+							height: 24px;
+							text-align: center;
+						}
+
+						.quantity span {
+							color: #000;
+							font-family: 'Satoshi', sans-serif;
+							font-size: 14px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: normal;
+						}
+
+					}
+
+					.tax {
+						color: #000;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 24px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+						display: flex;
+						align-items: flex-end; /* вирівнює по вертикалі вниз */
+						justify-content: flex-start; /* вирівнює по горизонталі вліво */
+						height: 100%;
+					}
+
+				}
+			}
+		}
+
+		.order_summary {
+			display: flex;
+			width: 505px;
+			height: 435px;
+			padding: 20px 24px;
+			flex-direction: column;
+			gap: 24px;
+
+			border-radius: 20px;
+			border: 1px solid rgba(0, 0, 0, 0.10);
+
+			.order_title {
+				color: #000;
+				font-family: 'Satoshi', sans-serif;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+			}
+
+			.order {
+				display: grid;
+				gap: 20px;
+
+				hr {
+					border: none;
+					height: 1px;
+					background-color: #e0e0e0;
+					margin: 0 0 0 0;
+				}
+
+				.info_tax {
+					display: flex;
+					justify-content: space-between;
+
+					.text_info {
+						color: rgba(0, 0, 0, 0.60);
+						font-family: 'Satoshi', sans-serif;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+					}
+
+					.tax {
+						color: #000;
+						text-align: right;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+
+					.tax.active {
+						color: #F33;
+						text-align: right;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+
+				}
+			}
+
+			.total {
+				.total_info_tax {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					.total_title{
+						color: #000;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: normal;
+					}
+					.tax{
+						color: #000;
+						text-align: right;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 24px;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+				}
+			}
+		}
+
+		.promo{
+			.promo-section {
+				display: flex;
+				gap: 12px;
+				margin-bottom: 24px;
+			}
+
+			.promo-input {
+				display: flex;
+				align-items: center;
+				background-color: #f2f2f2;
+				border-radius: 999px;
+				padding: 12px 16px;
+				flex: 1;
+			}
+
+			.promo-input .promo-icon {
+				margin-right: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.promo-input input {
+				border: none;
+				background: transparent;
+				color: rgba(0, 0, 0, 0.40);
+				font-family: 'Satoshi' , sans-serif;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				color: #888;
+				width: 100%;
+				outline: none;
+			}
+
+			.apply-button {
+				background-color: #000;
+				color: #FFF;
+				font-family: 'Satoshi' , sans-serif;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: normal;
+				padding: 12px 40px;
+				border: none;
+				border-radius: 62px;
+				cursor: pointer;
+			}
+
+			.checkout-button {
+				width: 100%;
+				background-color: #000;
+				color: #FFF;
+				font-family: 'Satoshi' , sans-serif;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: normal;
+				padding: 16px 24px;
+
+				border: none;
+				border-radius: 999px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 12px;
+				cursor: pointer;
+			}
+
+			.arrow-icon {
+				font-size: 20px;
+				display: flex;
+				align-items: flex-end;
+			}
+
+		}
+
+	}
+}

@@ -1,5 +1,6 @@
 .main {
 	background-color: $white;
+	padding-top: 64px;
 
 	.container {
 
@@ -30,7 +31,7 @@
 
 				.sub_title {
 					color: rgba(0, 0, 0, 0.60);
-					font-family: 'Satoshi' , sans-serif;
+					font-family: 'Satoshi', sans-serif;
 					font-size: 16px;
 					font-style: normal;
 					font-weight: 400;
@@ -54,7 +55,7 @@
 					margin-bottom: 48px;
 					cursor: pointer;
 					transition: background-color 0.3s;
-					font-family: 'Satoshi' , sans-serif;
+					font-family: 'Satoshi', sans-serif;
 					font-size: 16px;
 					font-style: normal;
 					font-weight: 500;
@@ -67,15 +68,19 @@
 
 				.stats {
 					display: flex;
-					justify-content: flex-start;
-					gap: 4rem;
-					flex-wrap: wrap;
+					justify-content: start;
+					gap: 64px;
+
+					.stat-item-left {
+						display: flex;
+						gap: 64px;
+					}
 				}
 
 				.stat-item {
 					h3 {
 						color: #000;
-						font-family: 'Satoshi' , sans-serif;
+						font-family: 'Satoshi', sans-serif;
 						font-size: 40px;
 						font-style: normal;
 						font-weight: 700;
@@ -87,7 +92,7 @@
 
 					p {
 						color: rgba(0, 0, 0, 0.60);
-						font-family: 'Satoshi' , sans-serif;
+						font-family: 'Satoshi', sans-serif;
 						font-size: 16px;
 						font-style: normal;
 						font-weight: 400;
@@ -97,20 +102,37 @@
 				}
 			}
 
+			.media_image {
+				display: none;
+			}
+
 			.brands_menu {
-				height: 122px;
-				width: auto;
+				height: auto;
+				width: 100%;
 				display: flex;
-				gap: 106px;
-				background-color: black;
+				flex-wrap: wrap;
+				justify-content: center;
 				align-items: center;
+				background-color: black;
 				margin-top: 93px;
-				padding: 0px 100px;
+				padding: 44px 100px;
+				gap: 40px 82px; // вертикальний і горизонтальний відступ між елементами
 
 				.brands_name {
-					width: 20%;
+					width: auto;
+					max-width: 200px; // можна обмежити розмір
+				}
+
+				svg path {
+					fill: white; /* Початковий колір заливки */
+					transition: fill 0.3s ease-in-out; /* Додаємо плавну анімацію */
+				}
+
+				svg:hover path {
+					fill: #acacac; /* Колір заливки при наведенні */
 				}
 			}
+
 
 		}
 
@@ -143,6 +165,7 @@
 
 					.arrivals_items {
 						width: 25%;
+						display: grid !important;
 
 						a {
 							display: block; // Якщо треба
@@ -163,12 +186,21 @@
 							gap: 8.26px;
 
 							.info_text {
-								color: #000;
-								font-family: 'Satoshi' , sans-serif;
-								font-size: 20px;
-								font-style: normal;
-								font-weight: 700;
-								line-height: normal;
+								a {
+									color: #000;
+									font-family: 'Satoshi', sans-serif;
+									font-size: 20px;
+									font-style: normal;
+									font-weight: 700;
+									line-height: normal;
+									text-decoration: none;
+									transition: color 0.3s ease-in-out;
+								}
+
+								a:hover {
+									color: #6a6a6a;
+								}
+
 							}
 
 							.rating {
@@ -188,7 +220,7 @@
 
 								.rating-text {
 									color: #000;
-									font-family: 'Satoshi' , sans-serif;
+									font-family: 'Satoshi', sans-serif;
 									font-size: 14px;
 									font-style: normal;
 									font-weight: 400;
@@ -198,7 +230,7 @@
 
 							.info_tax {
 								color: #000;
-								font-family: 'Satoshi' , sans-serif;
+								font-family: 'Satoshi', sans-serif;
 								font-size: 24px;
 								font-style: normal;
 								font-weight: 700;
@@ -223,7 +255,7 @@
 
 						cursor: pointer;
 						transition: background-color 0.3s;
-						font-family: 'Satoshi' , sans-serif;
+						font-family: 'Satoshi', sans-serif;
 						font-size: 16px;
 						font-style: normal;
 						font-weight: 500;
@@ -261,13 +293,15 @@
 
 				.style-grid {
 					display: grid;
-                  gap: 20px;
+					gap: 20px;
+
 					.style-grid_type {
 						display: grid;
 						grid-template-columns: 1fr 2fr; // тут ми кажемо: 1 частина для першого стовпця, 2 — для другого
 						grid-template-rows: repeat(1, 289px);
 						grid-gap: 2rem
 					}
+
 					.style-grid_type.style-grid_type2 {
 						grid-template-columns: 2fr 1fr; // тут ми кажемо: 1 частина для першого стовпця, 2 — для другого
 
@@ -282,21 +316,27 @@
 						align-items: flex-start;
 						justify-content: flex-start;
 
-
-						img {
+						a {
 							width: 100%;
 							height: 100%;
-							object-fit: cover; // <<< головне тут
-							display: block;
-							background-position: 0% 0%;
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover; // <<< головне тут
+								display: block;
+								background-position: 0% 0%;
+							}
 						}
+
 
 						span {
 							position: absolute;
 							top: 3rem;
 							left: 3.5rem;
 							color: #000;
-							font-family: 'Satoshi' , sans-serif;							font-size: 36px;
+							font-family: 'Satoshi', sans-serif;
+							font-size: 36px;
 							font-style: normal;
 							font-weight: 700;
 							line-height: normal;
@@ -329,6 +369,7 @@
 
 				.feedback_block {
 					padding: 28px 32px;
+					height: auto;
 					border-radius: 20px;
 					border: 1px solid rgba(0, 0, 0, 0.10);
 
@@ -344,19 +385,23 @@
 							color: #facc15; // Яскраво-жовтий (як на скріншоті)
 						}
 					}
-					.feedback_name{
+
+					.feedback_name {
 						color: #000;
 						leading-trim: both;
 						text-edge: cap;
-						font-family: 'Satoshi' , sans-serif;						font-size: 20px;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 20px;
 						font-style: normal;
 						font-weight: 700;
 						line-height: 22px; /* 110% */
 						margin-bottom: 12px;
 					}
-					.feedback_text{
+
+					.feedback_text {
 						color: rgba(0, 0, 0, 0.60);
-						font-family: 'Satoshi' , sans-serif;						font-size: 16px;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 16px;
 						font-style: normal;
 						font-weight: 400;
 						line-height: 22px; /* 137.5% */
@@ -366,7 +411,227 @@
 
 		}
 
-
 	}
 }
 
+@media (max-width: 768px) {
+	.main_banner {
+		background-image: none !important;
+		background-color: #F2F0F1 !important;
+
+		.title {
+			padding: 40px 59px 0 16px !important;
+
+			.title_text {
+				font-size: 36px;
+			}
+
+			.sub_title {
+				font-size: 14px;
+			}
+		}
+
+		.stats-section {
+			padding: 24px 16px 0 16px !important;
+			align-items: center;
+			display: grid;
+
+			.shop-now {
+				margin-bottom: 20px;
+			}
+
+			.stats {
+				display: grid !important;
+				gap: 14px !important;
+				justify-content: center !important;
+
+				.stat-item-block {
+					display: flex;
+					justify-content: center;
+				}
+			}
+		}
+
+		.media_image {
+			width: 100%;
+			height: auto; /* Висота під мобільну частину */
+			display: block !important;
+
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				display: flex;
+			}
+		}
+
+		.brands_menu {
+			gap: 20px 40px;
+			padding: 40px 16px !important;
+			margin-top: 0 !important;
+		}
+
+		.brands_name {
+			max-width: 120px;
+		}
+
+
+	}
+	.product-sections {
+		padding-top: 50px !important;
+
+		.arrivals_title {
+			font-size: 32px !important;
+			margin-bottom: 32px !important;
+		}
+
+		.swiper {
+			width: 100%;
+			padding: 20px 0;
+		}
+
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+
+			.info_text {
+				a {
+					font-size: 16px !important;
+				}
+
+			}
+
+			.rating .star {
+				width: 15px !important;
+				height: 15px !important;
+			}
+
+			.rating-text {
+				font-size: 12px !important;
+			}
+
+			.info_tax {
+				font-size: 20px !important;
+			}
+		}
+
+		.button_view {
+			padding: 24px 16px 0 16px !important;
+
+			button {
+				width: 100% !important;
+			}
+		}
+
+		hr {
+			margin: 40px 16px !important;
+		}
+	}
+	.browse_style {
+		.browse_banner {
+			margin: 50px 16px !important;
+			padding: 40px 24px 27px 24px !important;
+
+			.browse_banner_title {
+				font-size: 32px;
+				padding-bottom: 27px !important;
+			}
+
+			.style-grid {
+				display: grid !important;
+				gap: 20px !important;
+
+				.style-grid_type {
+					grid-template-columns: 1fr !important;
+					grid-template-rows: repeat(2, 310px) !important; /* Створюємо 4 рядки, висота яких автоматично підлаштовується під вміст */
+					grid-gap: 20px !important;
+				}
+
+				.style-grid_type2 {
+					grid-template-columns: 1fr !important;
+					grid-template-rows: repeat(2, 310px) !important; /* Створюємо 4 рядки, висота яких автоматично підлаштовується під вміст */
+					grid-gap: 20px !important;
+				}
+
+			}
+		}
+	}
+	.our_happy {
+		.happy_title {
+			font-size: 32px !important;
+			padding: 0 88px 24px 16px !important;
+		}
+
+		.scroll {
+			.swiper-wrapper {
+				.feedback_block {
+					width: 400px !important;
+					padding: 24px 24px !important;
+				}
+			}
+		}
+	}
+}
+
+
+@media (min-width: 768px) {
+	.swiper-wrapper {
+		display: flex !important;
+		gap: 20px !important;
+		flex-wrap: nowrap;
+	}
+	.swiper-slide {
+		width: auto !important;
+		flex: 1;
+	}
+}
+
+
+@media (max-width: 677px) {
+	.scroll {
+		padding: 0 100px 180px 100px !important;
+	}
+}
+
+
+@media (max-width: 583px) {
+	.scroll {
+		padding: 0 100px 210px 100px !important;
+	}
+}
+
+
+@media (max-width: 472px) {
+	.product-sections {
+		padding-top: 50px !important;
+
+		.swiper {
+			width: 100%;
+			padding: 20px 0;
+		}
+
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+
+			.info_text {
+				font-size: 12px !important;
+			}
+
+			.rating .star {
+				width: 10px !important;
+				height: 12px !important;
+			}
+
+			.rating-text {
+				font-size: 10px !important;
+			}
+
+			.info_tax {
+				font-size: 14px !important;
+			}
+		}
+
+
+	}
+}
