@@ -106,6 +106,9 @@ body{
 	line-height: 1.5;
 	overflow-x: hidden
 }
+body.scroll-lock {
+	overflow: hidden;
+}
 
 *,
 *:before,

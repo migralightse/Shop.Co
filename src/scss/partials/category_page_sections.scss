@@ -6,7 +6,7 @@
 		gap: 21px;
 		padding: 134px 100px 172px 100px;
 
-		.filters_container{
+		.filters_container {
 			max-height: 1300px;
 			padding: 20px 24px;
 			border-radius: 20px;
@@ -43,6 +43,12 @@
 						cursor: pointer;
 
 					}
+
+					.icon_button_cross {
+						display: none;
+					}
+
+
 				}
 			}
 
@@ -71,6 +77,12 @@
 						font-style: normal;
 						font-weight: 400;
 						line-height: normal;
+						cursor: pointer;
+						transition: color .3s ease-in-out;
+					}
+
+					.items_name:hover {
+						color: #333 !important;
 					}
 
 					.items_button {
@@ -83,6 +95,32 @@
 						cursor: pointer;
 					}
 				}
+			}
+
+			.filter_svg {
+				transition: transform 0.3s ease;
+			}
+
+			.filter_svg.active {
+				transform: rotate(180deg);
+			}
+
+			.title_text {
+				cursor: pointer;
+				transition: color .3s ease-in-out;
+			}
+
+			.title_text:hover {
+				color: #6a6a6a !important;
+			}
+
+			svg path {
+				fill: #000000;
+				transition: fill 0.3s ease-in-out; /* Додаємо плавну анімацію */
+			}
+
+			svg:hover path {
+				fill: #6a6a6a;
 			}
 
 			.price_filters {
@@ -114,6 +152,9 @@
 
 				.slider-track {
 					align-items: center;
+					max-height: 0;
+					overflow: hidden;
+					transition: max-height .4s ease;
 
 					.price_tax {
 						display: flex;
@@ -130,6 +171,10 @@
 							line-height: normal;
 						}
 					}
+				}
+
+				.slider-track.active {
+					max-height: 105px;
 				}
 
 			}
@@ -160,12 +205,6 @@
 						cursor: pointer;
 					}
 
-					.filter_svg {
-						transition: transform 0.3s ease;
-					}
-					.filter_svg.active {
-						transform: rotate(180deg);
-					}
 				}
 
 				.ellipse_color {
@@ -175,19 +214,70 @@
 				}
 
 
-					.ellipse_color.active {
-						max-height: 105px; // або більше, залежно від вмісту
-					}
+				.ellipse_color.active {
+					max-height: 105px; // або більше, залежно від вмісту
 
 
+				}
 
 
 				.ellipse_color {
 					display: grid; /* Робить контейнер grid-контейнером */
 					grid-template-columns: repeat(5, 1fr); /* Створює 5 стовпців однакової ширини */
 					grid-template-rows: repeat(2, auto);
-					gap: 13.5px;
+					gap: 13px;
 					row-gap: 16px; /* Відступ між рядками */
+
+					.color {
+						cursor: pointer;
+						position: relative;
+
+						svg {
+							z-index: 1;
+							height: 100%;
+						}
+						svg circle{
+							transition: filter .3s ease;
+						}
+
+						svg:hover circle {
+							filter: brightness(85%);
+						}
+
+
+
+						.checkmark-icon {
+							position: absolute;
+							top: 46.1%;
+							left: 47.9%;
+							transform: translate(-50%, -50%); // Центрування
+							opacity: 0; // За замовчуванням прихована
+							visibility: hidden; // Забезпечує, що вона не взаємодіє з елементами
+							transition: opacity 0.3s ease, visibility 0.3s ease; // Плавний перехід
+							z-index: 2; // Переконаємось, що галочка знаходиться над колом
+
+							.checkmark-path {
+								fill: #ffffff !important;
+							}
+
+						}
+
+						&.active {
+
+							.checkmark-icon {
+								opacity: 1; // Показати галочку
+								visibility: visible; // Зробити її видимою
+							}
+
+							// Якщо вам потрібно змінити вигляд самого кола SVG при активності div.color
+
+						}
+
+					}
+					.color.active svg circle{
+						filter: brightness(70%);
+					}
+
 				}
 			}
 
@@ -216,6 +306,8 @@
 						align-items: center;
 						cursor: pointer;
 					}
+
+
 				}
 
 				.size-selector {
@@ -223,6 +315,9 @@
 					grid-auto-flow: column; // Переходить вниз по рядках, потім у наступну колонку
 					grid-template-rows: repeat(5, auto); // 5 рядків
 					gap: 8px;
+					max-height: 0;
+					overflow: hidden;
+					transition: max-height .3s ease;
 
 					.sub_size_selector {
 						display: flex;
@@ -254,9 +349,14 @@
 					}
 				}
 
+				.size-selector.active {
+					max-height: 225px;
+				}
+
 				.button_end {
 					padding: 10px 20px;
 					border: none;
+					width: 41%;
 					border-radius: 62px; // Повністю заокруглені
 					background-color: #f1f1f1;
 					color: rgba(0, 0, 0, 0.60);
@@ -281,7 +381,7 @@
 
 			}
 
-			.dress_style {
+			.dress_filters {
 				.dress_filters_title {
 					display: flex;
 					justify-content: space-between;
@@ -311,6 +411,9 @@
 				.dress_items_filters {
 					display: grid;
 					gap: 20px;
+					max-height: 0;
+					overflow: hidden;
+					transition: max-height .3s ease;
 
 					.items_filters_name {
 						display: flex;
@@ -326,6 +429,8 @@
 							font-style: normal;
 							font-weight: 400;
 							line-height: normal;
+							cursor: pointer;
+							transition: color .3s ease-in-out;
 						}
 
 						.items_button {
@@ -337,7 +442,16 @@
 							align-items: center;
 							cursor: pointer;
 						}
+
+						.items_name:hover {
+							color: #333333 !important;
+
+						}
 					}
+				}
+
+				.dress_items_filters.active {
+					max-height: 150px;
 				}
 
 				.button_apply_filter {
@@ -351,15 +465,23 @@
 						border-radius: 62px;
 						border: 1px solid rgba(0, 0, 0, .1);
 						cursor: pointer;
-						transition: background-color .3s;
 						font-family: "Satoshi", sans-serif;
 						font-size: 14px;
 						font-style: normal;
 						font-weight: 500;
 						line-height: normal;
+						transition: background-color .3s ease-in-out;
+
 					}
+
+					.apply_filter:hover {
+						background-color: #222222;
+					}
+
 				}
 			}
+
+
 		}
 
 		.items_show {
@@ -412,21 +534,38 @@
 						display: flex;
 						gap: 5px;
 					}
+
+					.icon-button {
+						display: none;
+						background-color: #F0F0F0;;
+						border: none;
+						border-radius: 62px;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+						padding: 8px 8px;
+						transition: background-color .3s ease-in-out;
+					}
+
+					.icon-button:hover {
+						background-color: #d8d8d8;
+					}
 				}
 			}
 
 			.arrivals_items_casual {
-				display: grid;
-				gap: 35px;
+
 				margin-bottom: 32px;
 
 				.arrivals_items_block {
-					display: flex;
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
 					gap: 20px;
+					row-gap: 35px;
 				}
 
 				.arrivals_items {
-					width: 34%;
+					width: auto;
 
 					a {
 						display: block; // Якщо треба
@@ -447,12 +586,20 @@
 						gap: 8.26px;
 
 						.info_text {
-							color: #000;
-							font-family: 'Satoshi', sans-serif;
-							font-size: 20px;
-							font-style: normal;
-							font-weight: 700;
-							line-height: normal;
+							a {
+								color: #000;
+								font-family: 'Satoshi', sans-serif;
+								font-size: 20px;
+								font-style: normal;
+								font-weight: 700;
+								line-height: normal;
+								text-decoration: none;
+								transition: color 0.3s ease-in-out;
+							}
+
+							a:hover {
+								color: #6a6a6a;
+							}
 						}
 
 						.rating {
@@ -503,7 +650,6 @@
 			.pagination {
 				display: flex;
 				justify-content: space-between;
-				gap: 216px;
 				align-items: center;
 
 				.nav-btn {
@@ -535,7 +681,7 @@
 					}
 
 
-				&:hover {
+					&:hover {
 						background-color: #f2f2f2;
 					}
 
@@ -553,7 +699,7 @@
 					.page {
 
 						width: 40px;
-						padding: 12px;
+						padding: 8px;
 						border: none;
 						border-radius: 6px;
 						background-color: white;
@@ -561,7 +707,8 @@
 
 						color: rgba(0, 0, 0, 0.50);
 						text-align: center;
-						font-family: 'Satoshi' , sans-serif;						font-size: 14px;
+						font-family: 'Satoshi', sans-serif;
+						font-size: 14px;
 						font-style: normal;
 						font-weight: 500;
 						line-height: 20px; /* 142.857% */
@@ -588,6 +735,156 @@
 			}
 
 
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.category_page_sections {
+		.container {
+			padding: 120px 15px 185px 15px;
+
+			.filters {
+				transform: translateY(100%);
+				transition: transform .3s ease-in-out;
+				position: fixed;
+				left: 0;
+				width: 100%;
+				height: 91%;
+				z-index: 1002;
+				background-color: transparent !important;
+				box-shadow: none !important;
+				backdrop-filter: none !important;
+				border: none !important;
+				overflow-y: auto;
+
+				.filters_container {
+					background-color: $white;
+					height: auto;
+				}
+
+				.title_filters {
+					.icon-button {
+						display: none !important;
+					}
+
+				}
+
+				.icon_button_cross {
+					background-color: rgba(0, 0, 0, 0);
+					border: none;
+					border-radius: 50%;
+					display: flex !important;
+					justify-content: center;
+					align-items: center;
+					cursor: pointer;
+
+				}
+
+
+				.color_filters .ellipse_color .color .checkmark-icon {
+					left: 19.1px;
+					top: 20.9px;
+				}
+			}
+
+			.filters.active {
+				transform: translateY(-9%);
+
+			}
+
+			.items_show {
+				.title_items {
+					justify-content: normal !important;
+					gap: 8px !important;
+
+					.title_text {
+						font-size: 24px !important;
+					}
+				}
+
+
+				.title_sub_info {
+					justify-content: space-between;
+					width: 100%;
+
+					.title_sub_text {
+						font-size: 14px !important;
+					}
+
+					.title_sub_text.sort {
+						display: none !important;
+					}
+
+					.icon-button {
+						display: flex !important;
+
+					}
+				}
+
+				.arrivals_items_casual {
+					.arrivals_items_block {
+						grid-template-columns: repeat(2, 1fr) !important;
+						gap: 14px !important;
+						row-gap: 25px !important;
+
+						.arrivals_items.media {
+							display: none !important;
+
+						}
+					}
+				}
+
+			}
+
+			.pagination {
+				.nav-btn {
+					font-size: 12px !important;
+				}
+
+				.page {
+					font-size: 12px !important;
+					padding: 8px !important;
+				}
+			}
+
+
+		}
+	}
+}
+
+
+@media (max-width: 677px) {
+	.category_page_sections {
+		.container {
+			padding: 120px 15px 200px 15px !important;
+		}
+	}
+}
+
+
+@media (max-width: 583px) {
+	.category_page_sections {
+		.container {
+			padding: 120px 15px 220px 15px !important;
+
+
+			.pagination {
+				.page.media {
+					display: none;
+				}
+
+			}
+		}
+	}
+}
+
+
+@media (max-width: 462px) {
+	.pagination {
+		.pages {
+			display: none !important;
 		}
 	}
 }
